@@ -42,9 +42,9 @@ for line in Lines:
     print("Line{}: {}".format(count, line.strip()))
 
 
+# Look up how to read lines from a file in python
 new_file = open('new_file.txt')
-file_items = new_file.readline()
-
+file_items = new_file.readlines()
 for i in range(len(file_items)):
     each_item = file_items[i]
     print('Before: {}'.format(each_item))
@@ -52,6 +52,6 @@ for i in range(len(file_items)):
     file_items[i] = each_item[0:-1]
     print(file_items)
 # print(file_items)
-
 new_file.close()
+
 

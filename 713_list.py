@@ -42,4 +42,17 @@ Lines = ga_file.readlines()
 count = 0
 #strips the newline chracter
 for line in Lines:
-    print("Line{}: {}".format(count, line.strip()))
+    print("Line{}: {}\n".format(count, line.strip()))
+
+ga_file = open('general_assembly.txt', 'w')
+
+for i in range(len(squad_713)):
+    person = squad_713[i]
+
+    ga_file.write('{}\n'.format(person))
+
+ga_file.close()
+
+read_ga_file = open('general_assembly.txt')
+list_of_people = read_ga_file.readline()
+print(list_of_people)
